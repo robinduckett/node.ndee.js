@@ -1,0 +1,5 @@
+<?sjs
+puts('bad');
+?>
+
+hello!
