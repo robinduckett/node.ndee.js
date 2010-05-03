@@ -31,3 +31,22 @@ Ndee is a light-weight http server, written in Javascript, using Node.
         },
       ],
     };
+    
+## SJS Scripting
+
+Ndee currently provides the ability to include Serverside Javascript code directly in the source of your HTML or "sjs" files.
+
+Ndee exposes the following functions:
+
+* require(script) - does exactly what Node's built in require does.
+* compile(script, context) - compiles and runs and returns the output of an SJS string, within the context
+* puts(string) - outputs a string in place
+
+    <?sjs
+      
+      var cmpoutput = compile('<' + '?' + 'sjs var j = 4343; puts(j); ?' + '>', {});
+      puts(cmpoutput);
+    
+    ?>
+    
+The above script will compile the string, and output '4343'. The above functions are also exposed in compiled() output.

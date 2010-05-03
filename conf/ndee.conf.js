@@ -1,6 +1,6 @@
 exports.config = {
   listen: {
-    port: 80,
+    port: 4000,
     // hostname: localhost, // omit this to listen on all interfaces
     // path: unix_socket // omit post and hostname and use path to listen to a unix socket
   },
@@ -22,6 +22,11 @@ exports.config = {
       host: '192\.168\.0\.10',
       aliases: ['local.cx', 'turnkey.local'],
       document_root: ''
+    },
+    { // Namaste
+      host: 'stdev\.org',
+      aliases: ['www\.stdev\.org'],
+      document_root: '/stdev'
     },
   ],
 };
